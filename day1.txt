@@ -1,4 +1,6 @@
-Day 1-7 Dec 2025
 Restarted Devops prep seriously.
-Today I touched Linux, Git and shell. 
+Today I'm revising all the concepts of git I've studied so far. 
+
+1. Cloned my git repo
+2. started making commits
 

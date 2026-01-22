@@ -1,0 +1,45 @@
+SSH Authentication with GitHub (Industry Standard)
+
+Why SSH?
+- Password-based Git auth is deprecated by GitHub.
+- SSH keys are secure and commonly used in organizations.
+- Enables password-less, secure Git operations.
+
+Steps followed:
+
+1. Generate SSH key
+   ssh-keygen -t ed25519 -C "your_email@example.com"
+
+   This creates:
+   ~/.ssh/id_ed25519       (private key)
+   ~/.ssh/id_ed25519.pub   (public key)
+
+2. Start SSH agent and add key
+   eval "$(ssh-agent -s)"
+   ssh-add ~/.ssh/id_ed25519
+   
+3. Add public key to GitHub
+   - Copy key:
+     cat ~/.ssh/id_ed25519.pub
+   - GitHub → Settings → SSH & GPG keys → New SSH key
+
+4. Verify SSH authentication
+   ssh -T git@github.com
+   
+     Expected:
+     Hi <username>! You've successfully authenticated.
+
+5. Ensure repository uses SSH URL
+
+   git remote set-url origin git@github.com:<username>/<repo>.git
+
+6. Push changes securely
+   
+   git push origin <branch-name>
+
+
+Notes:
+- Private key must never be shared or committed.
+- Public key is safe to upload to GitHub.
+- SSH is widely used in large organizations along with SSO and access policies.
+

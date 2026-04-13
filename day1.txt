@@ -4,3 +4,7 @@ Today I'm revising all the concepts of git I've studied so far.
 1. Cloned my git repo
 2. started making commits
 
+Practised : 
+-git init, add, commit, branch, checkout, merge
+-linux: ls, chmod, mv, cp,rm, ps, df, free
+shell: shebang, chmod +x, script run

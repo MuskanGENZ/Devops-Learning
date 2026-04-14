@@ -1,1 +1,4 @@
-master change
+<<<<<<< HEAD
+=======
+feature change
+>>>>>>> conflict

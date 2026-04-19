@@ -1,1 +1,4 @@
-master version of conflict test
+<<<<<<< HEAD
+=======
+branch version of conflict test
+>>>>>>> test/git-assessment
